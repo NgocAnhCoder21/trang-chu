@@ -2,58 +2,42 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Image Editor JavaScript | CodingNepal</title>
+    <title>Playable Piano JavaScript | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container disable">
-        <h2>Easy Image Editor</h2>
-        <div class="wrapper">
-            <div class="editor-panel">
-                <div class="filter">
-                    <label class="title">Filters</label>
-                    <div class="options">
-                        <button id="brightness" class="active">Brightness</button>
-                        <button id="saturation">Saturation</button>
-                        <button id="inversion">Inversion</button>
-                        <button id="grayscale">Grayscale</button>
-                    </div>
-                    <div class="slider">
-                        <div class="filter-info">
-                            <p class="name">Brighteness</p>
-                            <p class="value">100%</p>
-                        </div>
-                        <input type="range" value="100" min="0" max="200">
-                    </div>
-                </div>
-                <div class="rotate">
-                    <label class="title">Rotate & Flip</label>
-                    <div class="options">
-                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
-                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
-                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
-                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="preview-img">
-                <img src="image-placeholder.svg" alt="preview-img">
-            </div>
+    <div class="wrapper">
+      <header>
+        <h2>Playable PIANO</h2>
+        <div class="column volume-slider">
+          <span>Volume</span><input type="range" min="0" max="1" value="0.5" step="any">
         </div>
-        <div class="controls">
-            <button class="reset-filter">Reset Filters</button>
-            <div class="row">
-                <input type="file" class="file-input" accept="image/*" hidden>
-                <button class="choose-img">Choose Image</button>
-                <button class="save-img">Save Image</button>
-            </div>
+        <div class="column keys-checkbox">
+          <span>Show Keys</span><input type="checkbox" checked>
         </div>
+      </header>
+      <ul class="piano-keys">
+        <li class="key white" data-key="a"><span>a</span></li>
+        <li class="key black" data-key="w"><span>w</span></li>
+        <li class="key white" data-key="s"><span>s</span></li>
+        <li class="key black" data-key="e"><span>e</span></li>
+        <li class="key white" data-key="d"><span>d</span></li>
+        <li class="key white" data-key="f"><span>f</span></li>
+        <li class="key black" data-key="t"><span>t</span></li>
+        <li class="key white" data-key="g"><span>g</span></li>
+        <li class="key black" data-key="y"><span>y</span></li>
+        <li class="key white" data-key="h"><span>h</span></li>
+        <li class="key black" data-key="u"><span>u</span></li>
+        <li class="key white" data-key="j"><span>j</span></li>
+        <li class="key white" data-key="k"><span>k</span></li>
+        <li class="key black" data-key="o"><span>o</span></li>
+        <li class="key white" data-key="l"><span>l</span></li>
+        <li class="key black" data-key="p"><span>p</span></li>
+        <li class="key white" data-key=";"><span>;</span></li>
+      </ul>
     </div>
 
-    <script src="script.js"></script>
-    
   </body>
 </html>
